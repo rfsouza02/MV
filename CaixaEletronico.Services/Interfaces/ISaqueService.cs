@@ -1,5 +1,6 @@
 ﻿using CaixaEletronico.Model;
 using CaixaEletronico.Model.DTO;
+using CaixaEletronico.Model.Enums;
 using System.Collections.Generic;
 
 namespace CaixaEletronico.Services.Interfaces

@@ -1,4 +1,6 @@
-﻿namespace CaixaEletronico.Model
+﻿using CaixaEletronico.Model.Enums;
+
+namespace CaixaEletronico.Model
 {
     public class ConfiguracaoSaque
     {

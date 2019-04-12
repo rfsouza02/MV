@@ -1,9 +1,10 @@
-using CaixaEletronico.Model;
+using CaixaEletronico.Model.Enums;
 using CaixaEletronico.Model.DTO;
 using CaixaEletronico.Services;
 using CaixaEletronico.Services.Interfaces;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using CaixaEletronico.Model;
 
 namespace CaixaEletronico.Tests
 {

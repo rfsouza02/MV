@@ -1,5 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using CaixaEletronico.Model.DTO;
+using CaixaEletronico.Model.Enums;
 using CaixaEletronico.Services;
 using CaixaEletronico.Model;
 

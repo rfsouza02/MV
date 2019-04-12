@@ -1,7 +1,46 @@
-﻿@{
+﻿@model CaixaEletronico.Models.SaqueViewModel
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
+@using (Html.BeginForm("Index", "Home", FormMethod.Post, new { @class = "form-inline" }))
+{
+    <div class="form-group">
+        <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
+        <div class="input-group @(!String.IsNullOrWhiteSpace(Model.Erro) ? "has-error" : String.Empty)">
+            <div class="input-group-addon">R$</div>
+            @Html.TextBoxFor(m => m.ValorRequisitado, new { Id = "valor", Placeholder = "Digite o valor", @class = "form-control" })
+            <div class="input-group-addon">,00</div>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Realizar Saque</button>
+}
+@if (!String.IsNullOrWhiteSpace(Model.Erro))
+{
+    <h6>@Model.Erro</h6>
+}
 <div class="row">
-    
+    <div class="col-xs-4">
+        @if (Model.ValoresSaque != null && Model.ValoresSaque.Count > 0)
+        {
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Nota</th>
+                        <th>Quantidade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var valor in Model.ValoresSaque)
+                    {
+                        <tr>
+                            <td>@valor.Key</td>
+                            <td>@valor.Value</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+    </div>
 </div>

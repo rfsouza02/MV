@@ -1,8 +1,9 @@
-﻿using CaixaEletronico.Model;
+﻿using CaixaEletronico.Model.Enums;
 using CaixaEletronico.Model.DTO;
 using CaixaEletronico.Services.Interfaces;
 using System;
 using System.Collections.Generic;
+using CaixaEletronico.Model;
 
 namespace CaixaEletronico.Services
 {
@@ -39,6 +40,10 @@ namespace CaixaEletronico.Services
         {
             var resultado = new Dictionary<TipoNota, int>();
             var resto = saqueDTO.ValorRequisitado;
+
+            // Caso utilizasse List<TipoNota> no lugar de flags, poderia usar foreach,
+            // no entanto, como a quantidade de tipos de notas não é um valor que se altera
+            // de forma comum decidi por essa abordagem para economizar memória e processamento.
 
             if ((this.ConfiguracaoSaque.NotasDisponiveis & TipoNota.Cem) != 0)
             {
@@ -109,6 +114,10 @@ namespace CaixaEletronico.Services
             {
                 return false;
             }
+
+            // Caso utilizasse List<TipoNota> no lugar de flags, poderia usar foreach,
+            // no entanto, como a quantidade de tipos de notas não é um valor que se altera
+            // de forma comum decidi por essa abordagem para economizar memória e processamento.
 
             if ((this.ConfiguracaoSaque.NotasDisponiveis & TipoNota.Cem) != 0)
             {

@@ -1,4 +1,5 @@
 ﻿using CaixaEletronico.Model;
+using CaixaEletronico.Model.Enums;
 using CaixaEletronico.Services.Interfaces;
 
 namespace CaixaEletronico.Services

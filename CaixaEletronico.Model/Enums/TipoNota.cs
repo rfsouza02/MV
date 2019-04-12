@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CaixaEletronico.Model
+namespace CaixaEletronico.Model.Enums
 {
     [Flags]
     public enum TipoNota

@@ -6,12 +6,14 @@
 
   <ItemGroup>
     <PackageReference Include="bootstrap" Version="4.3.1" />
+    <PackageReference Include="JQuery.MoneyMask" Version="1.0.3.1" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Models\" />
+    <ProjectReference Include="..\CaixaEletronico.Model\CaixaEletronico.Model.csproj" />
+    <ProjectReference Include="..\CaixaEletronico.Services\CaixaEletronico.Services.csproj" />
   </ItemGroup>
 
 </Project>
